@@ -1,0 +1,44 @@
+%load text components other than NewsGotT
+\renewcommand{\rmdefault}{fbb-LF}% Roman font for use in math mode
+\RequirePackage[scaled=.85]{beramono}% used only by \mathtt
+\RequirePackage[type1]{cabin}% used only by \mathsf
+\RequirePackage{amsthm}% load before newtxmath
+\RequirePackage[libertine,vvarbb]{newtxmath}% does not load minlibertine because another Roman text package was specified
+\RequirePackage[scr=rsfso]{mathalfa}
+\RequirePackage{bm}% load after all math to give access to bold math
+%Now load the otf text fonts using fontspec---won't affect math
+\RequirePackage[no-math]{fontspec}
+
+
+\newfontfamily{\newsgottl}{NewsGotT}[
+Path = novathesis-files/FontStyles/fonts/,
+Extension = .ttf,
+Ligatures=TeX,
+UprightFont=NewsGotT-Light
+]
+
+
+
+
+\setmainfont{NewsGotT}[
+Path = novathesis-files/FontStyles/fonts/,
+Extension = .ttf,
+%LetterSpace= 1.5,
+Ligatures=TeX,
+UprightFont=NewsGotT-Regular,
+BoldFont=NewsGotT-Bold,
+ItalicFont=NewsGotT-Italic,
+BoldItalicFont=NewsGotT-Bold-Italic]
+
+%https://sourcefoundry.org/hack/
+\setmonofont{Hack}[
+%Scale=MatchLowercase,
+Scale=0.8,
+Path = novathesis-files/FontStyles/fonts/,
+Extension = .ttf,
+Ligatures=TeX,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic]
+
