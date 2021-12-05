@@ -1,4 +1,4 @@
-# UMINHO-PHD-MSc-Covers
+# UMINHO PhD/MSc Coversand front page
 
 ## General 
 
@@ -6,7 +6,7 @@ This is repository has templates for generating UMINHO's PhD thesis/MSc disserta
 
 This is a work in progress. As this work uses PSTricks, to compile this you have to use XeTeX (XeLaTeX), but also because it has UM official fonts (this uses `fontspec`).
 
-The image below is the cover for a PhD Thesis for UMINHO's School of Engineering. Note that the Adobe Illustrator file provided in the UMINHO's official website has a 3mm margin called *bleeding* to give the printing company some leverage to trim the cover. Also, the width of the spine in that AI file has a 3.5mm margin in each side (7mm in total) to also give the printing company some leverage to adjust the width in accordance with the paper type and number of pages. **The measurements were made with PDF X-Change Editor.**
+The image below is the cover for a PhD Thesis for UMINHO's School of Engineering. Note that the Adobe Illustrator file provided in the UMINHO's official website has a 3mm margin called *bleeding* to give the printing company some leverage to trim the cover. Also, the width of the spine in that AI file has a 3.5mm margin in each side (7mm in total) to also give the printing company some leverage to adjust the width in accordance with the paper type and number of pages. **The measurements were made with PDF X-Change Editor.** A WIP sample can be found [here](https://github.com/b-pereira/UMINHO-PHD-MSc-Covers/raw/main/UMINHO%20-%20Covers%20WIP.pdf). Note that part of some of the front-page letters are still in white because the commands are the same as for the cover. Switches for languages and type of work are in progress to implement. Also this samples's code is still not in repository.
 
 ![imagem](https://user-images.githubusercontent.com/944511/144550137-d5769a35-1cb7-4099-a44e-0273a6009470.png)
 
