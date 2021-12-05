@@ -42,8 +42,8 @@ BoldItalicFont=NewsGotT-Bold-Italic]
 \def\UMUOEI[#1]#2{\begin{tikzpicture}[
 	% bars styling,
 	bar/.style={rectangle,fill=white,rounded corners=0.08cm,minimum width=0.16cm,inner sep=0pt},
-	umBig/.style={minimum height=0.73cm},
-	umSmall/.style={minimum height=0.45cm},
+	umBig/.style={minimum height=0.74cm},
+	umSmall/.style={minimum height=0.44cm},
 	engBar/.style={minimum height=0.86cm},
 	umLogoPosition/.style={xshift=1.3cm,yshift=1.3cm}
   ]
@@ -52,8 +52,8 @@ BoldItalicFont=NewsGotT-Bold-Italic]
 	% Uminho logo
 	\fill[fill=#1] (0,0) -- (2.6,0) -- (2.6,2.6) -- (0,2.6) -- cycle;
 	\foreach \i in {1,...,3}{
-		\node at (\i*120+30:0.45)[bar,umBig,umLogoPosition,rotate=\i*120-60]{};
-		\node at (\i*120+90:0.61)[bar,umSmall,umLogoPosition,rotate=\i*120]{};
+		\node at (\i*120+30:0.46)[bar,umBig,umLogoPosition,rotate=\i*120-60]{};
+		\node at (\i*120+90:0.60)[bar,umSmall,umLogoPosition,rotate=\i*120]{};
 	}
 	% EngUminho logo
   
