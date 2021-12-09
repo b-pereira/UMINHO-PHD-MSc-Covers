@@ -1,0 +1,7 @@
+1) download the latest version (search in the web for "gnuplot")
+2) extract it somewhere (like c:\programs\gnuplot)
+3) check inside the folde ..gnuplot\bin\ if the file "gnuplot.exe" exists. If not, make a copy of the file "pgnuplot.exe" and give to this copy the name "gnuplot.exe"
+4) add to the windows PATH the folder ..gnuplot\bin, create the variables "GDFONTPATH = c:\windows\fonts" and "GNUPLOT_FONTPATH = c:\windows\fonts"
+5) enable the pdflatex compiler to call external programs (once the settings are added, close and restart the frontend!):
+	a) winedt: options -> execution_mode -> console_applications -> select "pdflatex" compiler -> on the text-box "parameters" add "--shell-escape"
+	b) texnikcenter: build -> define_output_profiles -> select the profile "LaTeX => pdf" -> on "command line arguments blabla" add "--shell-escape"
