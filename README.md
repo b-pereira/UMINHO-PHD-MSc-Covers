@@ -1,4 +1,4 @@
-# UMINHO PhD/MSc Coversand front page
+# UMINHO PhD/MSc Covers and Front page
 
 ## General 
 
