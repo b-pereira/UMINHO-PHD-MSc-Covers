@@ -1,0 +1,13 @@
+\newcounter{supervisor}
+\setcounter{supervisor}{1}
+
+
+\newcommand{\UMSupervisor}[1]{
+\UMSupervisorStr[\the\value{supervisor}]:={#1}
+\stepcounter{supervisor}
+}
+
+\newcommand{\supervisorslist}{
+\newcounter{sp} 
+\forloop{sp}{1}{\value{sp} < 10}{\UMSupervisorStr[\arabic{sp}]\\}
+}
