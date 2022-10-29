@@ -1,102 +1,18 @@
-\documentclass[12pt]{article}
-% load the necessary packages
-\usepackage[paperheight=297mm,paperwidth=440mm,margin=0mm]{geometry}
-\usepackage[dvipsnames,prologue,table]{pstricks}
-\usepackage{pst-text}
-\usepackage{pst-grad}
-\usepackage{graphicx}
+\documentclass[12pt, notitlepage]{article}
+\include{packages}
+\include{strings}
+\include{generalcommands}
 
-\input{newsgott}
-\usepackage{lipsum}
+\UMSupervisor{Professor(a) Doutor(a) Nome Nome Nome 1}
+\UMSupervisor{Professor(a) Doutor(a) Nome Nome Nome 2}
 
-\usepackage{layouts}
-\usepackage{varwidth}
-\usepackage{ragged2e}
-\usepackage{pstricks-add, pst-plot}
-\usepackage{auto-pst-pdf}
-\usepackage{tikz}
-\usetikzlibrary{positioning}
-\usetikzlibrary{backgrounds}
+\include{coverelements}
 
 
 
 
-\parindent=0pt
 \begin{document}
 \thispagestyle{empty}
-
-
-\newsavebox\LogoBox
-\sbox\LogoBox{\UMUOEI[um]{eng}}
-
-\newsavebox\SchoolBox
-\sbox\SchoolBox{%
-\begin{minipage}[l]{52mm}
-\color{white}
-\fontsize{14.7pt}{20pt}\selectfont{\sffamily{\textbf{Universidade do Minho}}}
-
-\selectfont{\newsgottl{Escola de Engenharia}}
-\end{minipage}
-}%
-
-\newsavebox\AuthorBox
-\sbox\AuthorBox{%
-\begin{minipage}[b]{134mm}
-\color{white}
-\fontsize{17pt}{20.4pt}\selectfont{\sffamily\color{white}{Nome do Autor}}
-\vspace{\baselineskip}\\
-\fontsize{17pt}{20.4pt}\selectfont{\sffamily\color{white}{\textbf{Título Título Título Título Título Título\\Título Título Título Título Título\\Título Título Título Título}}}
-\end{minipage}
-}%
-
-\newsavebox\CourseBox
-\sbox\CourseBox{%
-\begin{minipage}[b]{134mm}
-\color{white}
-\fontsize{14pt}{16.8pt}\selectfont{\sffamily{%
-Dissertação de Mestrado\\     
-Nome do Mestrado\\
-Área de especialização\\
-\vspace{0.1\baselineskip}\\
-Trabalho Efetuado sob a orientação do(a)\\
-\textbf{Professor(a) Doutor(a) Nome Nome Nome}
-}%
-}%
-\end{minipage}
-}%
-
-\newsavebox\DateBox
-\sbox\DateBox{\fontsize{10pt}{10pt}\selectfont{\sffamily\color{white}{março de 2019}}}
-
-\newsavebox\SpineLogoBox
-\sbox\SpineLogoBox{\SpineUMUOEI[um]{eng}}
-
-\newsavebox\SpineAuthorBox
-\sbox\SpineAuthorBox{%
-\color{white}%
-\begin{varwidth}[c][13mm][c]{0.5\textwidth}%
-\narrowragged
-\fontsize{12pt}{14.4pt}\selectfont{\sffamily{Nome do Autor}}%
-\end{varwidth}%
-\hspace{2mm}
-\begin{varwidth}[c][13mm][c]{0.5\textwidth}%
-\fontsize{12pt}{14.4pt}\selectfont{%
-\sffamily{%
-\textbf{Título Título Título Título Título Título\\Título Título Título Título Título Título Título}%
-}%
-}%
-\end{varwidth}%
-}%
-
-\newsavebox\YearBox
-\sbox\YearBox{%
-\begin{varwidth}[c][12.5mm][c]{0.5\textwidth}%
-\narrowragged%
-\color{white}%
-\fontsize{10pt}{14.4pt}\selectfont{\sffamily{UMinho | 2019}}%
-\end{varwidth}%
-}%
-
 
 \psset{unit=1mm}
 
@@ -105,6 +21,7 @@ Trabalho Efetuado sob a orientação do(a)\\
 \psframe[linestyle=none, linewidth=0, fillstyle=solid,fillcolor=gray](0,0)(440,297)
 
 \rput[lb](309,271){\usebox\LogoBox}
+
 
 \rput[lt](309,261){%
 \usebox\SchoolBox
@@ -134,5 +51,11 @@ Trabalho Efetuado sob a orientação do(a)\\
 \usebox\YearBox%
 }%
 \end{pspicture}
+
+\begin{pspicture}(440mm,297mm)
+\psframe[linestyle=none, linewidth=0, fillstyle=solid,fillcolor=um](0,0)(440,297)
+\end{pspicture}
+
+\include{include_main_front_page}
 
 \end{document}
