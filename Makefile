@@ -2,15 +2,26 @@
 all: xelatex clean 
 
 xelatexfrontpage: standalone_front_page.tex 
-	latexmk -lualatex standalone_front_page.tex --outdir=dissertacao 
+	xelatex -shell-escape \
+		-synctex=1 \
+		-interaction=nonstopmode \
+		-file-line-error \
+		-pdf \
+    --outdir=dissertacao \
+		standalone_front_page.tex 
 
 xelatex: main.tex 
-	latexmk -xelatex main.tex --outdir=dissertacao 
+	xelatex -shell-escape \
+		-synctex=1 \
+		-interaction=nonstopmode \
+		-file-line-error \
+		-pdf \
+    --outdir=dissertacao \
+	 	main.tex 
 
 
 
 clean: 
-	cp dissertacao/main.pdf dissertation.pdf
 	rm -rf dissertacao/
 
 install: deps
